@@ -1,17 +1,20 @@
-public class Fibonacci {
-    public static void main(String[] args) {
-        int limite = 10; // Cantidad de números a generar en la serie
-        int a = 0, b = 1;
+public class fibonacci {
 
-        System.out.println("Serie de Fibonacci de " + limite + " elementos:");
-
-        for (int i = 1; i <= limite; i++) {
-            System.out.print(a + " ");
-            
-            // Calcular el siguiente valor
-            int siguiente = a + b;
-            a = b; // El primer número toma el valor del segundo
-            b = siguiente; // El segundo número toma el valor de la suma
+    // Algoritmo recursivo para la serie de Fibonacci
+    public static int fibonacciRecursivo(int n) {
+        if (n <= 1) {
+            return n;
         }
+        return fibonacciRecursivo(n - 1) + fibonacciRecursivo(n - 2);
+    }
+
+    public static void main(String[] args) {
+        int limite = 10; 
+        System.out.println("Serie de Fibonacci (Algoritmo Recursivo) para " + limite + " términos:");
+        
+        for (int i = 0; i < limite; i++) {
+            System.out.print(fibonacciRecursivo(i) + " ");
+        }
+        System.out.println();
     }
 }
