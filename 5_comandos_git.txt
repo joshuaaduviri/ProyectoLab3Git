@@ -1,0 +1,5 @@
+1. git status - Muestra el estado actual del repositorio.
+2. git add . - Agrega los cambios al área de preparación.
+3. git commit -m "mensaje" - Guarda los cambios en el historial local.
+4. git push origin <rama> - Sube los cambios al repositorio remoto.
+5. git pull - Descarga e integra los cambios desde el repositorio remoto.
